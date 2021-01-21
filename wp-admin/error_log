@@ -1,0 +1,1 @@
+[03-Dec-2020 14:52:11 UTC] PHP Fatal error:  Out of memory (allocated 56885248) (tried to allocate 8192 bytes) in /home/amplify/public_html/wp-content/plugins/wordpress-seo/inc/class-wpseo-replace-vars.php on line 1267
