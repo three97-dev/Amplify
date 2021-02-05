@@ -107,6 +107,7 @@ blockquote::after {
 }
 
 
+
 /* -------------------------------------------------------------------------- */
 
 /*	1. Document Setup
@@ -133,6 +134,7 @@ body {
 	letter-spacing: -0.015em;
 	text-align: left;
 }
+
 
 @supports ( font-variation-settings: normal ) {
 
@@ -6807,6 +6809,228 @@ input[type="submit"].wpcf7-form-control:hover {
 		float: left;
 		text-align: left;
 	}
+	
+	.sa-slider-image {
+		display: none;
+	}
+	
+	.above-footer-container {
+		padding-top: 40px;
+	}
+	
+	.number-series {
+		display: none;
+	}
+	.element-space-inner-custom {
+		height: 40px !important;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px){ 
+	.elementor-section.elementor-section-height-full {
+		height: content !important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 877px){ 
+	.top-section {
+	}
+}
+
+@media (min-width: 878px) and (max-width: 1023px){ 
+	.top-section {
+	}
+}
+
+@media (max-width: 1023px){ 
+	.top-section {
+		height: unset;
+	}
+}
+
+@media (min-width: 1024px){ 
+	.top-section .elementor-element-populated {
+		padding: 0 !important;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1240px){ 
+	.top-section {
+		padding-left: 60px !important;
+		padding-right: 60px !important;
+	}	
+}
+
+/* slider */
+
+.textwidget > .white .sa_owl_theme .owl-nav .owl-prev {
+    background: url(https://amplify-solutions.ca/wp-content/uploads/2021/01/arrow-left.svg) no-repeat center center !important;
+}
+
+.textwidget > .white .sa_owl_theme .owl-nav .owl-next {
+    background: url(https://amplify-solutions.ca/wp-content/uploads/2021/01/arrow-right.svg) no-repeat center center !important;
+}
+
+.textwidget > .white .sa_owl_theme .owl-nav .owl-prev:hover, .textwidget > .white .sa_owl_theme .owl-nav .owl-next:hover {
+    background-color: #FFF !important;
+}
+
+.sa_owl_theme button {
+	outline: none;
+}
+
+.textwidget .sa_owl_theme .owl-nav div, .textwidget .sa_owl_theme .owl-nav button {
+	width: 35px !important;
+	height: 35px !important;
+	top: unset !important;
+	margin-top: -30px !important;
+	z-index: 1;
+	bottom: -60px;
+}
+
+.textwidget .sa_owl_theme .owl-dots .active span {
+    background-color: #F15D5E !important;
+}
+
+.textwidget .sa_owl_theme .owl-dots {
+    bottom: -56px !important;
+	margin-left: -64px;
+}
+
+.textwidget .owl-carousel.owl-loaded {
+    height: 432px;
+	border-radius:30px;
+	
+	box-shadow: 0px 0px 7px #00000040;
+	
+}
+
+.textwidget .owl-carousel{
+    height: 432px;
+	padding: 65px 36px 56px 64px;
+}
+
+.textwidget > div{
+    background: #FFF !important;
+	text-align: left;
+	letter-spacing: 0px;
+	color: #1E1B4C;
+}
+.textwidget .owl-carousel .owl-stage-outer{
+    max-height: 100%;
+    overflow-y: scroll;
+}
+.textwidget .sa_hover_container {
+	padding: 0 !important;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.textwidget .sa_hover_container > div {
+	padding-right: 20px;
+}
+
+/* scrollbar  */
+.textwidget ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.textwidget ::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.textwidget ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #E9E9F2;
+  border-radius: 10px;
+}
+
+/* Handle */
+.textwidget ::-webkit-scrollbar-thumb {
+  background: #CBCBD5;
+  border-radius: 4px;
+}
+
+.sa-slider-header {
+	margin-bottom: 60px !important;
+}
+
+.sa-slider-image {
+	margin-top: 150px;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+	padding-top: 0 !important;
+}
+
+.margin-right-overflow {
+	margin-right: -20px;
+}
+
+.padding-top-bottom-20 {
+	padding: 20px 0;
+}
+
+.padding-top-bottom-30 {
+	padding: 30px 0;
+}
+
+.textwidget > div {
+    background: unset !important;
+}
+
+.arrowed-background .elementor-element-populated {
+	padding: 10px 0 0 0 !important;
+}
+
+.footer-inner .wpcf7-checkbox .wpcf7-list-item-label {
+    color: #FFF;
+}
+
+.elementor-kit-7 {
+    --e-global-color-primary: #1E1D4C;
+    --e-global-color-secondary: #F05D5E;
+    --e-global-color-text: #6E84A6;
+    --e-global-color-accent: #F05D5E;
+    --e-global-color-0e49159: #FFFFFF;
+    --e-global-typography-primary-font-family: "Poppins";
+    --e-global-typography-primary-font-weight: 400;
+    --e-global-typography-secondary-font-family: "Poppins";
+    --e-global-typography-secondary-font-weight: 500;
+    --e-global-typography-text-font-family: "Titillium Web" !important;
+    --e-global-typography-text-font-size: 21px !important;
+    --e-global-typography-text-font-weight: 600;
+    --e-global-typography-accent-font-family: "Poppins";
+    --e-global-typography-accent-font-weight: 400;
+    --e-global-typography-font-family: "Titillium Web";
+    --e-global-typography-font-size: 17px;
+    --e-global-typography-font-weight: 600;
+    --e-global-typography-text-transform: uppercase;
+    --e-global-typography-letter-spacing: 0.4px;
+    --e-global-typography-2ac9517-font-family: "Work Sans";
+    --e-global-typography-2ac9517-font-size: 18px;
+    --e-global-typography-2ac9517-font-weight: 400;
+    font-family: "Poppins", Sans-serif;
+    font-size: 19px;
+}
+
+p {
+	font-family: "Titillium Web" !important;
+}
+
+.elementor-heading-title-600 h1.elementor-heading-title {
+	font-family: "Poppins", Sans-serif !important;
+/* 	font-weight: 600 !important; */
+}
+
+.min-width-100vw {
+	width: 100vw !important;
 }
 
 /*
