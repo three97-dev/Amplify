@@ -25,10 +25,10 @@ define( 'WPCACHEHOME', '/home2/ampligd4/public_html/test/wp-content/plugins/wp-s
 define( 'DB_NAME', 'ampligd4_WP_prod' );
 
 /** MySQL database username */
-define( 'DB_USER', 'ampligd4_WP' );
+define( 'DB_USER', '' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '6Izj2JOCX2fV' );
+define( 'DB_PASSWORD', '' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
