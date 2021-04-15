@@ -16,19 +16,50 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<?php
-
-
+	
+	if ( is_single() ) {
+		the_title( '<div class="entry-title">', '</div>' );
+	}
+	if ( is_single() ) {
+	?>
+	<div class="entry-excerpt">
+		<?php the_excerpt(); ?>
+	</div>
+	<?php
+	}
+	?>
+	<?php
+	if ( is_single() ) {
+	?>
+	<div class="single-post-featured-image">
+	<?php
+	}
+	?>
+	<?php
+	
 	if ( ! is_search() ) {
 		get_template_part( 'template-parts/featured-image' );
 	}
 
 	?>
-
-	<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
+	<?php
+	if ( is_single() ) {
+	?>
+	</div>
+	<?php
+	}
+	?>
+	<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; echo is_single() ? ' single-post-content': '';?> ">
 
 		<div class="entry-content">
-
+			
 			<?php
+			if ( is_single() ) {
+				$less_than_1_str = '<span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> &lt; 1</span> <span class="rt-label rt-postfix"></span></span>';
+				echo "<div class='post-extra'><div>".get_the_date("l, F j, Y")."</div>";
+				echo do_shortcode('[rt_reading_time label="" postfix="minute read"]') == $less_than_1_str ? "Reading Time less than 1 min" : do_shortcode('[rt_reading_time label="" postfix="minute read"]');
+				echo "</div>";
+			}
 			if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
 				the_excerpt();
 			} else {

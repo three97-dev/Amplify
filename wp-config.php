@@ -21,14 +21,14 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('WP_CACHE', true);
-define( 'WPCACHEHOME', '/home2/ampligd4/public_html/wp-content/plugins/wp-super-cache/' );
-define( 'DB_NAME', 'ampligd4_WP' );
+define( 'WPCACHEHOME', '/home2/ampligd4/public_html/test/wp-content/plugins/wp-super-cache/' );
+define( 'DB_NAME', 'ampligd4_WP_prod' );
 
 /** MySQL database username */
 define( 'DB_USER', 'ampligd4_WP' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'hHX,psZa8{z1' );
+define( 'DB_PASSWORD', '6Izj2JOCX2fV' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );

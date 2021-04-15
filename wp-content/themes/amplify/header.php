@@ -8,6 +8,22 @@
  * @subpackage Twenty_Twenty
  * @since Twenty Twenty 1.0
  */
+if('POST' == $_SERVER['REQUEST_METHOD'] && $_POST['firstName'] != ""){
+	$email_to = 'mkennedy@amplify-solutions.ca';
+	$email_subject = 'Get A Trial Form';
+	$email_body = "<html>
+        <body>
+            <div>
+                <p>Name : <b>".$_POST['firstName']." ".$_POST['lastName']."</b></p>
+                <p>Email :  <b>".$_POST['email']."</b></p>
+                <p>Business :  <b>".$_POST['business']."</b></p>
+                <p>Phone Number :  <b>".$_POST['phoneNumber']."</b></p>
+            </div>
+        </body>
+    </html>";
+	wp_mail($email_to, $email_subject, $email_body);
+	header("Location: /thank-you");
+}
 
 ?><!DOCTYPE html>
 
@@ -22,18 +38,25 @@
 
 		<?php wp_head(); ?>
 		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-WRSG8TZ');</script>
+		})(window,document,'script','dataLayer','GTM-WRSG8TZ');</script> -->
 		<!-- End Google Tag Manager -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-178PL276KH"></script>
+		<script>
+		  	window.dataLayer = window.dataLayer || [];
+		  	function gtag(){dataLayer.push(arguments);}
+		  	gtag('js', new Date());
+		  	gtag('config', 'G-178PL276KH');
+		</script>	
 	</head>
 
 	<body <?php body_class(); ?>>
 		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRSG8TZ"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRSG8TZ"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 		<!-- End Google Tag Manager (noscript) -->
 		<?php
 		wp_body_open();
